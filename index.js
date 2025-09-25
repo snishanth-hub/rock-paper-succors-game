@@ -78,7 +78,7 @@ function start() {
     }
 
     let compout = Math.floor(Math.random() * 3) + 1;
-
+    randval;
     switch (compout) {
         case 1:
             comptrock();
