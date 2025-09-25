@@ -17,16 +17,19 @@ let userval;
 function rock() {
     userval = rock_paper_scissors.rock;
     myval.textContent = "rock";
+    randval.textContent="";
 }
 
 function paper() {
     userval = rock_paper_scissors.paper;
     myval.textContent = "paper";
+        randval.textContent="";
 }
 
 function sissors() {
     userval = rock_paper_scissors.scissors;
     myval.textContent = "scissors";
+        randval.textContent="";
 }
 
 function comptrock() {
@@ -78,7 +81,7 @@ function start() {
     }
 
     let compout = Math.floor(Math.random() * 3) + 1;
-    randval.textContent="";
+
     switch (compout) {
         case 1:
             comptrock();
