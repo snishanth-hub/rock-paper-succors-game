@@ -79,23 +79,38 @@ h1 {
 }
 
 /* 🎮 Play Button */
+/* 🎮 Glowed-Up Play Button */
 #btn1 {
-    padding: 12px 30px;
-    font-size: 1.2rem;
-    background-color: #00ffc8;
+    padding: 14px 35px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #00ffc8, #00b3a4);
     color: #1f1c2c;
     border: none;
-    border-radius: 50px;
+    border-radius: 999px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.25s ease;
+    margin-top: 25px;
+    box-shadow:
+        0 4px 15px rgba(0, 255, 200, 0.4),
+        0 0 10px rgba(0, 255, 200, 0.3) inset;
+    letter-spacing: 1px;
 }
 
 #btn1:hover {
-    background-color: #00c6a2;
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #00b3a4, #00ffc8);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow:
+        0 8px 20px rgba(0, 255, 200, 0.6),
+        0 0 20px rgba(0, 255, 200, 0.4) inset;
+}
+
+#btn1:active {
+    transform: scale(0.98);
+    box-shadow:
+        0 2px 8px rgba(0, 255, 200, 0.2),
+        0 0 10px rgba(0, 255, 200, 0.2) inset;
 }
 
 /* 🧍 Responsive for Mobile */
