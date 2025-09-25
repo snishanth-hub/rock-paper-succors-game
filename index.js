@@ -1,6 +1,6 @@
 document.getElementById("img1").addEventListener("click", rock);
 document.getElementById("img2").addEventListener("click", paper);
-document.getElementById("img3").addEventListener("click", sissors);
+document.getElementById("img3").addEventListener("click", scissors); // fixed typo
 
 let display = document.getElementById("display");
 let myval = document.getElementById("myval");
@@ -12,24 +12,27 @@ let rock_paper_scissors = {
     scissors: 3
 };
 
-let userval;
+let userval = 0;
 
 function rock() {
     userval = rock_paper_scissors.rock;
     myval.textContent = "rock";
-    randval.textContent="";
+    randval.textContent = "";
+    display.textContent = "";
 }
 
 function paper() {
     userval = rock_paper_scissors.paper;
     myval.textContent = "paper";
-        randval.textContent="";
+    randval.textContent = "";
+    display.textContent = "";
 }
 
-function sissors() {
+function scissors() {
     userval = rock_paper_scissors.scissors;
     myval.textContent = "scissors";
-        randval.textContent="";
+    randval.textContent = "";
+    display.textContent = "";
 }
 
 function comptrock() {
