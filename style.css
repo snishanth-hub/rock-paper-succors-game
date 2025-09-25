@@ -1,0 +1,108 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(145deg, #1f1c2c, #928dab);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+/* Game Images */
+#images {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+#images img {
+    width: 130px;
+    height: 130px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+#images img:hover {
+    transform: scale(1.15);
+    box-shadow: 0 12px 25px rgba(255, 255, 255, 0.3);
+    border-color: #00ffc8;
+}
+
+/* Results Display */
+#values {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    margin-top: 20px;
+}
+
+#values p {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+#display {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #00ffc8;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* Button */
+#btn1 {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background-color: #00ffc8;
+    color: #1f1c2c;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#btn1:hover {
+    background-color: #00c6a2;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #images {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #images img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #btn1 {
+        width: 100%;
+    }
+}
