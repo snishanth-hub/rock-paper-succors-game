@@ -1,2 +1,2 @@
-# rock-paper-succors-game
+# rock-paper-sissors
 a short project game 
