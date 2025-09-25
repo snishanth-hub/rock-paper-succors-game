@@ -1,38 +1,47 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Rock Paper Scissors</h1>
 
-    </head>
-    <body>
-        <div id="images" >
-            <img id="img1" src="images/rock.jpg">
-            <img id="img2" src="images/old-sheet-of-paper-cartoon-with-curled-corner-stationery-paper-letter-vector.jpg">
-            <img id="img3" src="images/scissor-vector-icon.jpg">
+  <div class="game-container">
+    <!-- YOU -->
+    <div class="player-side">
+      <h2>You</h2>
+      <div class="choices" id="user-choices">
+        <img id="rock" src="images/rock.jpg" alt="Rock" />
+        <img id="paper" src="images/paper.png" alt="Paper" />
+        <img id="scissors" src="images/scissors.webp" alt="Scissors" />
+      </div>
+      <p id="myval">Your choice: —</p>
+    </div>
 
+    <!-- VS ICON -->
+    <div class="vs">
+      <p>VS</p>
+    </div>
 
-        </div>
-        <div id="values">
-            <p id="myval">your value</p>
-            <p id="randomval"></p>
-            <button id="btn1" onclick="start()"></button>
-            
+    <!-- COMPUTER -->
+    <div class="player-side">
+      <h2>Computer</h2>
+      <div class="choices" id="comp-choice">
+        <img src="images/question-mark.png" alt="Computer Choice" id="comp-img" />
+      </div>
+      <p id="randomval">Computer chose: —</p>
+    </div>
+  </div>
 
-            <p id="display">display result</p>
-        </div>
-        <div id="submit">
+  <!-- BUTTON & RESULT -->
+  <div class="action">
+    <button id="btn1" onclick="submit()">Play</button>
+    <p id="display">Pick a move to play!</p>
+  </div>
 
-        </div>
-
-        
-
-
-
-
-
-
-
-        <script src="index.js"></script>
-    </body>
-
+  <script src="index.js"></script>
+</body>
 </html>
