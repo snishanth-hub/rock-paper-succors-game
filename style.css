@@ -1,100 +1,45 @@
-/* 🌐 Global Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #f5f5f5;
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px;
-}
-
-/* 🏷️ Title */
-h1 {
-  font-size: 3rem;
-  margin-bottom: 40px;
-  text-shadow: 0 0 10px #00ffc8;
-}
-
-/* 🎮 Game Layout */
-.game-container {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-bottom: 40px;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.player-side {
+.container {
   text-align: center;
-}
-
-.player-side h2 {
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-  color: #00ffc8;
-  text-shadow: 0 0 10px #00ffc8;
-}
-
-/* 📸 Choice Images */
-.choices img {
-  width: 120px;
-  height: 120px;
+  background: white;
+  padding: 40px;
   border-radius: 12px;
-  margin: 0 10px;
-  object-fit: cover;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.choices img {
+  width: 100px;
+  margin: 10px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 3px solid transparent;
-  background-color: #1c1c1c;
+  transition: transform 0.2s;
 }
 
 .choices img:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #00ffc8;
-  border-color: #00ffc8;
 }
 
-/* ✅ Selected */
-.selected {
-  box-shadow: 0 0 20px #00ffc8;
-  border: 3px solid #00ffc8;
-}
-
-/* 🤖 Computer Choice */
-#comp-choice img {
-  width: 120px;
-  height: 120px;
-  border-radius: 12px;
-  background-color: #111;
-  object-fit: cover;
-}
-
-/* VS Text */
-.vs p {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #ccc;
-  text-shadow: 0 0 5px #00ffc8;
-}
-
-/* 🖱️ Play Button */
-#btn1 {
-  padding: 18px 60px;
-  font-size: 1.6rem;
-  font-weight: 700;
-  background-color: #00ffc8;
-  color: #0f2027;
-  border: none;
-  border-radius: 6px;
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
   cursor: pointer;
-  transition: 0.3s ease all;
-  box-shadow: 0 0 15px
+}
+
+.results {
+  margin-top: 30px;
+}
+
+#display {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}

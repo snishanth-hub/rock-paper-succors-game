@@ -1,47 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Rock Paper Scissors</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Rock Paper Scissors</h1>
-
-  <div class="game-container">
-    <!-- YOU -->
-    <div class="player-side">
-      <h2>You</h2>
-      <div class="choices" id="user-choices">
-        <img id="rock" src="images/rock.jpg" alt="Rock" />
-        <img id="paper" src="images/paper.png" alt="Paper" />
-        <img id="scissors" src="images/scissors.webp" alt="Scissors" />
-      </div>
-      <p id="myval">Your choice: —</p>
+  <div class="container">
+    <h1>Rock Paper Scissors</h1>
+    
+    <div class="choices">
+      <img id="img1" src="images/rock.jpg" alt="Rock" title="Rock">
+      <img id="img2" src="images/old-sheet-of-paper-cartoon-with-curled-corner-stationery-paper-letter-vector.jpg" alt="Paper" title="Paper">
+      <img id="img3" src="images/scissor-vector-icon.jpg" alt="Scissors" title="Scissors">
     </div>
 
-    <!-- VS ICON -->
-    <div class="vs">
-      <p>VS</p>
-    </div>
+    <button onclick="start()">Play</button>
 
-    <!-- COMPUTER -->
-    <div class="player-side">
-      <h2>Computer</h2>
-      <div class="choices" id="comp-choice">
-        <img src="images/question-mark.png" alt="Computer Choice" id="comp-img" />
-      </div>
-      <p id="randomval">Computer chose: —</p>
+    <div class="results">
+      <p><strong>Your Choice:</strong> <span id="myval"></span></p>
+      <p><strong>Computer's Choice:</strong> <span id="randomval"></span></p>
+      <p id="display"></p>
     </div>
   </div>
 
-  <!-- BUTTON & RESULT -->
-  <div class="action">
-    <button id="btn1" onclick="submit()">Play</button>
-    <p id="display">Pick a move to play!</p>
-  </div>
-
-  <script src="index.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
