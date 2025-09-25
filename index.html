@@ -5,49 +5,96 @@
   <title>Rock Paper Scissors</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Basic styling (optional, you can use a separate style.css if you want) */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      text-align: center;
-      padding: 40px;
-    }
+    /* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .container {
-      background-color: white;
-      max-width: 600px;
-      margin: auto;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
-    .choices img {
-      width: 120px;
-      height: 120px;
-      margin: 15px;
-      border-radius: 10px;
-      cursor: pointer;
-      border: 3px solid transparent;
-      transition: transform 0.2s, border-color 0.2s;
-    }
+.container {
+  background-color: #1e1e1e;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.1);
+  text-align: center;
+  max-width: 700px;
+  width: 100%;
+}
 
-    .choices img:hover {
-      transform: scale(1.1);
-      border-color: #007BFF;
-    }
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #00ffc8;
+  letter-spacing: 1px;
+}
 
-    button {
-      padding: 12px 25px;
-      font-size: 16px;
-      margin-top: 20px;
-      cursor: pointer;
-    }
+/* Choice buttons */
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 25px;
+}
 
-    .results {
-      margin-top: 30px;
-      font-size: 18px;
-    }
+.choices img {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 2px solid transparent;
+}
+
+.choices img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00ffc8;
+  border-color: #00ffc8;
+}
+
+/* Play button */
+button {
+  background-color: #00ffc8;
+  color: #121212;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #00c0a2;
+}
+
+/* Results section */
+.results {
+  margin-top: 35px;
+  font-size: 1.2rem;
+}
+
+.results p {
+  margin: 10px 0;
+}
+
+#display {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00ffc8;
+}
+
   </style>
 </head>
 <body>
