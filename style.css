@@ -1,168 +1,100 @@
-/* ===== Reset & Base Styles ===== */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* 🌐 Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #141e30, #243b55);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #e1e8f0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    user-select: none;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
 }
 
-/* ===== Heading ===== */
+/* 🏷️ Title */
 h1 {
-    font-weight: 700;
-    font-size: 3.5rem;
-    margin-bottom: 30px;
-    color: #00ffc8;
-    text-shadow:
-        0 0 8px #00ffc8,
-        0 0 20px #00ffc8;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px #00ffc8;
 }
 
-/* ===== Images Container ===== */
-#images {
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
+/* 🎮 Game Layout */
+.game-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
 }
 
-#images img {
-    width: 140px;
-    height: 140px;
-    border-radius: 20px;
-    object-fit: cover;
-    box-shadow:
-        0 12px 25px rgba(0, 255, 200, 0.2),
-        inset 0 0 10px rgba(0, 255, 200, 0.15);
-    cursor: pointer;
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-                box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 3px solid transparent;
-    background-color: #101f3c;
+.player-side {
+  text-align: center;
 }
 
-#images img:hover,
-#images img.selected {
-    transform: scale(1.15);
-    box-shadow:
-        0 15px 35px rgba(0, 255, 200, 0.7),
-        inset 0 0 18px rgba(0, 255, 200, 0.45);
-    border-color: #00ffc8;
+.player-side h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #00ffc8;
+  text-shadow: 0 0 10px #00ffc8;
 }
 
-/* ===== Game Info & Results ===== */
-#values {
-    background: rgba(20, 40, 70, 0.8);
-    padding: 30px 45px;
-    border-radius: 25px;
-    box-shadow:
-        0 10px 30px rgba(0, 255, 200, 0.25);
-    max-width: 420px;
-    width: 90%;
-    text-align: center;
-    user-select: text;
+/* 📸 Choice Images */
+.choices img {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  margin: 0 10px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid transparent;
+  background-color: #1c1c1c;
 }
 
-#values p {
-    font-size: 1.25rem;
-    margin-bottom: 15px;
+.choices img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00ffc8;
+  border-color: #00ffc8;
 }
 
-#display {
-    font-size: 2.25rem;
-    font-weight: 700;
-    margin-top: 15px;
-    color: #00ffc8;
-    text-shadow:
-        0 0 6px #00ffc8,
-        0 0 14px #00ffc8;
+/* ✅ Selected */
+.selected {
+  box-shadow: 0 0 20px #00ffc8;
+  border: 3px solid #00ffc8;
 }
 
-/* ===== Play Button ===== */
+/* 🤖 Computer Choice */
+#comp-choice img {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  background-color: #111;
+  object-fit: cover;
+}
+
+/* VS Text */
+.vs p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ccc;
+  text-shadow: 0 0 5px #00ffc8;
+}
+
+/* 🖱️ Play Button */
 #btn1 {
-    margin-top: 40px;
-    padding: 20px 60px;
-    font-size: 1.8rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #141e30;
-    background: linear-gradient(90deg, #00ffc8 0%, #00b3a4 100%);
-    border: 4px solid #00ffc8;
-    border-radius: 4px; /* sharp edges */
-    cursor: pointer;
-    box-shadow:
-        0 8px 25px rgba(0, 255, 200, 0.7),
-        inset 0 0 20px rgba(0, 255, 200, 0.4);
-    transition:
-        background 0.35s ease,
-        transform 0.3s ease,
-        box-shadow 0.35s ease;
-    user-select: none;
-}
-
-#btn1:hover {
-    background: linear-gradient(90deg, #00b3a4 0%, #00ffc8 100%);
-    transform: translateY(-5px) scale(1.1);
-    box-shadow:
-        0 15px 40px rgba(0, 255, 200, 0.9),
-        inset 0 0 30px rgba(0, 255, 200, 0.7);
-    border-color: #00b3a4;
-}
-
-#btn1:active {
-    transform: scale(0.95);
-    box-shadow:
-        0 4px 15px rgba(0, 255, 200, 0.5),
-        inset 0 0 15px rgba(0, 255, 200, 0.5);
-}
-
-
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    #images {
-        gap: 25px;
-    }
-
-    #images img {
-        width: 110px;
-        height: 110px;
-        border-radius: 15px;
-    }
-
-    #values {
-        padding: 25px 30px;
-        max-width: 320px;
-    }
-
-    #values p {
-        font-size: 1.1rem;
-    }
-
-    #display {
-        font-size: 1.7rem;
-    }
-
-    #btn1 {
-        padding: 14px 38px;
-        font-size: 1.2rem;
-    }
-}
+  padding: 18px 60px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: #00ffc8;
+  color: #0f2027;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  box-shadow: 0 0 15px
